@@ -23,18 +23,21 @@
         {{!-- Do not foget to change link --}}
         <a href="/">Top Wines</a>
         <a href="/about_us">About Us</a>
+        {{#if logged_in}}
         <a href="/">Offers</a>
+        {{/if}}
       </nav>
       {{#if logged_in}}
-      <a href="/profile">profile</a> |
+      {{!-- <a href="/profile">profile</a> | --}}
       <button class="no-button" id="logout">logout</button>
       {{else}}
       <a href="/login">login</a>
       {{/if}}
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
+      <div class="gallery">
+        {{{body}}}
+      </div>
     </main>
     <footer>
 
