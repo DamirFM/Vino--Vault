@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 const fs = require('fs');
 const readline = require('readline');
 
-// GET all galleries for homepage
+
 router.get('/', async (req, res) => {
   try {
     const dbCategoryData = await Category.findAll({
@@ -58,7 +58,7 @@ router.get('/top_wines', async (req, res) => {
           });
 
         // Sort the wines by rating in descending order
-        const sortedWines = wines.sort((a, b) => b.rating - a.rating);
+        const sortedWines = wines.sort((a, b) => b.price - a.price);
         console.log(sortedWines, '--------------')
         res.render('top_wines', {
           sortedWines,

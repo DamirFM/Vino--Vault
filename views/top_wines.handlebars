@@ -2,9 +2,11 @@
 {{#each sortedWines as |wine|}}
 <div class="wine">
  <h2>{{this.name}}</h2>
- <img src="{{this.imageUrl}}" alt="{{this.name}}">
- <p>{{this.varietal}}</p>
- <p>{{this.alcohol_volume}}</p>
- <p>{{this.notes}}</p>
+ <p>${{this.price}}</p>
+<img src="{{this.image}}" alt="{{this.name}}">
+ <p>Varietal: {{this.varietal}}</p>
+ <p>Alcohol Volume: {{this.alcohol_volume}}</p>
+ <p>Tasting notes: {{this.notes}}</p>
+ <p>Category: {{this.category}}</p>
 </div>
 {{/each}}
