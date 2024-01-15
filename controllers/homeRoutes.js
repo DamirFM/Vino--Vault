@@ -42,7 +42,7 @@ router.get('/category/:id', async (req, res) => {
 
     const category = dbCategoryData.get({ plain: true });
     console.log(category)
-    res.render('category', { category });
+    res.render('category', { ...category });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
