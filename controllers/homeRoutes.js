@@ -62,6 +62,7 @@ router.get('/top_wines', async (req, res) => {
         console.log(sortedWines, '--------------')
         res.render('top_wines', {
           sortedWines,
+          logged_in: req.session.logged_in,
         });
       });
     } else {
@@ -79,6 +80,7 @@ router.get('/top_wines', async (req, res) => {
       console.log(sortedWines, '=============')
       res.render('top_wines', {
         sortedWines,
+        logged_in: req.session.logged_in,
       });
     }
   } catch (err) {
@@ -111,22 +113,12 @@ router.get('/category/:id', async (req, res) => {
   }
 });
 
-// GET one painting
-router.get('/painting/:id', async (req, res) => {
-  try {
-    const dbPaintingData = await Painting.findByPk(req.params.id);
 
-    const painting = dbPaintingData.get({ plain: true });
-    console.log(painting)
-    res.render('painting', { painting });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 router.get('/about_us', (req, res) => {
-  res.render('about_us');
+  res.render('about_us', {
+    logged_in: req.session.logged_in
+  })
 });
 
 router.get('/login', (req, res) => {
