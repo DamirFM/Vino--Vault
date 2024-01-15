@@ -17,5 +17,5 @@ if (process.env.JAWSDB_URL) {
     }
   );
 }
-
+console.log("Sequelize Configuration:", sequelize.config);
 module.exports = sequelize;
