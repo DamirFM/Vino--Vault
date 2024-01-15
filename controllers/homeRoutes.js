@@ -1,6 +1,8 @@
 const router = require('express').Router();
-const {User, Wine, Review, Category} = require('../models');
+const { User, Wine, Review, Category } = require('../models');
 const withAuth = require('../utils/auth');
+const fs = require('fs');
+const readline = require('readline');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
@@ -18,13 +20,73 @@ router.get('/', async (req, res) => {
     console.log(categories)
     res.render('homepage', {
       categories,
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/top_wines', async (req, res) => {
+  console.log('topwines')
+  try {
+    // Check if the database is empty
+    const count = await Wine.count();
+
+    if (count < 10) {
+      // Seed the database with the JSONL file data
+      console.log('8888888')
+      let wines = [];
+      const rl = readline.createInterface({
+        input: fs.createReadStream('./assets/wine_documents.jsonl'),
+        output: process.stdout,
+        terminal: false
+      });
+
+      rl.on('line', (line) => {
+        wines.push(JSON.parse(line));
+      });
+
+      rl.on('close', async () => {
+        await Wine.bulkCreate(wines)
+          .then(() => {
+            console.log('Wines have been seeded successfully!');
+          })
+          .catch((err) => {
+            console.log('Error seeding wines:', err);
+          });
+
+        // Sort the wines by rating in descending order
+        const sortedWines = wines.sort((a, b) => b.rating - a.rating);
+        console.log(sortedWines, '--------------')
+        res.render('top_wines', {
+          sortedWines,
+        });
+      });
+    } else {
+      console.log('++++++')
+      // Fetch all wines from the database
+      const dbWineData = await Wine.findAll({});
+
+      // Map the raw database data to plain JavaScript objects
+      const wines = dbWineData.map((wine) =>
+        wine.get({ plain: true })
+      );
+
+      // Sort the wines by rating in descending order
+      const sortedWines = wines.sort((a, b) => b.rating - a.rating);
+      console.log(sortedWines, '=============')
+      res.render('top_wines', {
+        sortedWines,
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 router.get('/category/:id', async (req, res) => {
   try {
@@ -78,9 +140,9 @@ router.get('/login', (req, res) => {
 router.get('/review', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await Review.findAll( {
+    const userData = await Review.findAll({
       attributes: { exclude: ['password'] },
-      include: [{ model: Wine }, {model: User}],
+      include: [{ model: Wine }, { model: User }],
     });
 
     const user = userData.get({ plain: true });
