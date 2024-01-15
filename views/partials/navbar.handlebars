@@ -1,0 +1,23 @@
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="vine">🍷</span>
+        <a href="/">Vino-Vault</a>
+      </h1>
+      <nav>
+        <input id="user-input" class="form-control" type="text" placeholder="Search for your Wine!">
+        <!-- Conditionally render login or logout links -->
+        <a href="/">Home</a>
+        {{!-- Do not foget to change link --}}
+        <a href="/">Top Wines</a>
+        <a href="/about_us">About Us</a>
+
+        <a href="/">Offers</a>
+
+      </nav>
+      {{#if logged_in}}
+      {{!-- <a href="/profile">profile</a> | --}}
+      <button class="no-button" id="logout">logout</button>
+      {{else}}
+      <a href="/login">login</a>
+      {{/if}}
+    </header>

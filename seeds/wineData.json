@@ -1,0 +1,50 @@
+[
+    {
+        "filename":"01-blossoming-apricot.jpg",
+        "title": "Chateau de Landiras 2018",
+        "varietal": "Bordeaux Red Blends",
+        "location": "Graves, Bordeaux, France",
+        "price": "19",
+        "rating": "95"
+    },
+    {
+        "filename":"01-blossoming-apricot.jpg",
+        "title": "Silver Oak Napa Valley Cabernet Sauvignon 2016",
+        "varietal": "Cabernet Sauvignon",
+        "location": "Napa Valley, California",
+        "price": "144",
+        "rating": "92"
+    },
+    {
+        "filename":"01-blossoming-apricot.jpg",
+        "title": "Silver Oak Alexander Valley Cabernet Sauvignon 2017",
+        "varietal": "Cabernet Sauvignon",
+        "location": "Alexander Valley, Sonoma County, California",
+        "price": "89",
+        "rating": "91"
+    },
+    {
+        "filename":"01-blossoming-apricot.jpg",
+        "title": "Beaulieu Vineyard Georges de Latour Private Reserve 2018",
+        "varietal": "Cabernet Sauvignon",
+        "location": "Napa Valley, California",
+        "price": "70",
+        "rating": "97"
+    },
+    {
+        "filename":"01-blossoming-apricot.jpg",
+        "title": "Joseph Phelps Freestone Vineyards Pinot Noir 2019",
+        "varietal": "Pinot Noir",
+        "location": "Montalcino, Tuscany, Italy",
+        "price": "75",
+        "rating": "94"
+    },
+    {
+        "filename":"01-blossoming-apricot.jpg",
+        "title": "Duckhorn Napa Valley Cabernet Sauvignon 2019",
+        "varietal": "Sangiovese",
+        "location": "Paso Robles, Central Coast, California",
+        "price": "30",
+        "rating": "97"
+    }
+]

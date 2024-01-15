@@ -1,9 +1,11 @@
 <!-- Loop over each object in the projects array -->
 <div>Featured Wines</div>
 
-<section class="featured">
-{{#each galleries as |gallery|}}
-{{> gallery-details}}
-{{/each}}
-</section>
+<div class="container">
+  <div class="row homepage-main">
+    {{#each categories as |category|}}
+    {{> card}}
+    {{/each}}
+  </div>
+</div>
    

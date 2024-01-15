@@ -1,13 +1,35 @@
-const User = require('./User');
-const Gallery = require('./category');
-const Painting = require('./allWine');
+const User = require('./user');
+const Wine = require('./wine');
+const Category = require('./category');
+const Review = require('./review');
 
-Gallery.hasMany(Painting, {
-  foreignKey: 'gallery_id',
-});
+// Define associations
 
-Painting.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
-});
+User.hasMany(Review, {
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
+  });
 
-module.exports = { User, Gallery, Painting };
+Review.belongsTo(User, {
+    foreignKey: "user_id",
+  });
+
+Wine.hasMany(Review, {
+    foreignKey: "wine_id",
+    onDelete: "CASCADE",
+  });
+
+Review.belongsTo(Wine, {
+    foreignKey: "wine_id",
+  });
+
+Category.hasMany(Wine, {
+    foreignKey: "category_id",
+    onDelete: "CASCADE",
+  });
+
+Wine.belongsTo(Category, {
+    foreignKey: "category_id",
+  });
+
+module.exports = { User, Wine, Review, Category };
