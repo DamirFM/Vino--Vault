@@ -1,52 +1,48 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
-// const withAuth = require('../utils/auth');
+const {User, Wine, Review, Category} = require('../models');
+const withAuth = require('../utils/auth');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findAll({
+    const dbCategoryData = await Category.findAll({
       include: [
         {
-          model: Painting,
-          attributes: ['filename', 'description'],
+          model: Wine,
+          attributes: ['filename', 'title', 'varietal', 'location', 'price', 'rating'],
         },
       ],
     });
-
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
-    );
-console.log(galleries)
+    // Serialize data so the template can read it
+    const categories = dbCategoryData.map((category) => category.get({ plain: true }));
+    console.log(categories)
     res.render('homepage', {
-      galleries,
+      categories,
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-router.get('/gallery/:id', async (req, res) => {
+
+router.get('/category/:id', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findByPk(req.params.id, {
+    const dbCategoryData = await Wine.findByPk(req.params.id, {
       include: [
         {
-          model: Painting,
-          attributes: [
-            'id',
-            'title',
-            'artist',
-            'exhibition_date',
-            'filename',
-            'description',
-          ],
+          model: Category,
+          attributes: ['category_name'],
         },
+        {
+          model: Review,
+        }
       ],
     });
 
-    const gallery = dbGalleryData.get({ plain: true });
-    console.log(gallery)
-    res.render('gallery', { gallery });
+    const category = dbCategoryData.get({ plain: true });
+    console.log(category)
+    res.render('category', { category });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -77,6 +73,25 @@ router.get('/login', (req, res) => {
     return;
   }
   res.render('login');
+});
+
+router.get('/review', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await Review.findAll( {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Wine }, {model: User}],
+    });
+
+    const user = userData.get({ plain: true });
+    console.log(user);
+    res.render('comments', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

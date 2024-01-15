@@ -1,0 +1,14 @@
+[
+    {
+        "category_name" : "Red Wine"
+    },
+    {
+        "category_name" : "White Wine"
+    },
+    {
+        "category_name" : "Rosé"
+    },
+    {
+        "category_name" : "Sparkling"
+    }
+]
