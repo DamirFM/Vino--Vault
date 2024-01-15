@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 const fs = require('fs');
 const readline = require('readline');
 
-// GET all galleries for homepage
+
 router.get('/', async (req, res) => {
   try {
     const dbCategoryData = await Category.findAll({
