@@ -1,16 +1,17 @@
-<h1>{{wine.title}}</h1>
-<h3> {{name}}</h3>
-<h3> {{varietal}}</h3>
-<h3> {{location}}</h3>
-<h3> {{price}}</h3>
-<h3> {{rating}}</h3>
-<h3> {{category.category_name}}</h3>
+<div class="container">
+  <div class="row homepage-main">
+<h2>Vine Brand:{{title}}</h2>
+<h3>Vine varietal:{{varietal}}</h3>
+<h3>Vine location: {{location}}</h3>
+<h3>price: ${{price}}</h3>
+<h3>rating: {{rating}}</h3>
+<h3>category: {{category.category_name}}</h3>
 
 {{>review_form}}
-
 {{#each reviews as |review|}}
 {{>review_card}}
 {{/each}}
-
+  </div>
+</div>
 
 <script src="/js/review"></script>
