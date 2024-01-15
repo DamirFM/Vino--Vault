@@ -58,7 +58,7 @@ router.get('/top_wines', async (req, res) => {
           });
 
         // Sort the wines by rating in descending order
-        const sortedWines = wines.sort((a, b) => b.price - a.price);
+        const sortedWines = wines.sort((a, b) => b.rating - a.rating);
         console.log(sortedWines, '--------------')
         res.render('top_wines', {
           sortedWines,
