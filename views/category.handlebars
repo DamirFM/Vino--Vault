@@ -6,13 +6,11 @@
 <h3>price: ${{price}}</h3>
 <h3>rating: {{rating}}</h3>
 <h3>category: {{category.category_name}}</h3>
-
 {{>review_form}}
 {{#each reviews as |review|}}
 {{>review_card}}
 {{/each}}
   </div>
 </div>
-
 
 <script src="/js/review"></script>
