@@ -1,0 +1,32 @@
+{{#if logged_in}}
+<!-- Content for logged in users -->
+{{else}}
+<!-- Modal for non-logged in users -->
+<div id="loginModal" style="display: none;">
+ <div class="modal-content">
+  <span class="close">&times;</span>
+  <p>Please log in to see this content.</p>
+  <button onclick="location.href='/login';">Log In</button>
+ </div>
+</div>
+<script>
+ var modal = document.getElementById("loginModal");
+ modal.style.display = "block";
+</script>
+{{/if}}
+
+
+
+{{#each sortedWines as |wine|}}
+<div class="wine">
+ <h2>{{this.name}}</h2>
+ <p>${{this.price}}</p>
+<img src="{{this.image}}" alt="{{this.name}}">
+<p>Rating:{{this.rating}}/100</p>
+ <p>Varietal: {{this.varietal}}</p>
+ <p>Alcohol Percent{{this.alcohol_percent}}</p>
+ <p>Bottle Size: {{this.alcohol_volume}}</p>
+ <p>Tasting notes: {{this.notes}}</p>
+ <p>Category: {{this.category}}</p>
+</div>
+{{/each}}
