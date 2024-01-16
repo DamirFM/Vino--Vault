@@ -61,7 +61,7 @@ router.get('/top_wines', async (req, res) => {
         const sortedWines = wines.sort((a, b) => b.rating - a.rating);
         console.log(sortedWines, '--------------')
         res.render('top_wines', {
-          sortedWines,
+          sortedWines, logged_in: req.session.logged_in,
         });
       });
     } else {
@@ -78,7 +78,67 @@ router.get('/top_wines', async (req, res) => {
       const sortedWines = wines.sort((a, b) => b.rating - a.rating);
       console.log(sortedWines, '=============')
       res.render('top_wines', {
-        sortedWines,
+        sortedWines,logged_in: req.session.logged_in
+
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/offers', async (req, res) => {
+  console.log('offers loaded')
+  try {
+    // Check if the database is empty
+    const count = await Wine.count();
+
+    if (count < 10) {
+      // Seed the database with the JSONL file data
+      console.log('77777777777')
+      let wines = [];
+      const rl = readline.createInterface({
+        input: fs.createReadStream('./assets/wine_documents.jsonl'),
+        output: process.stdout,
+        terminal: false
+      });
+
+      rl.on('line', (line) => {
+        wines.push(JSON.parse(line));
+      });
+
+      rl.on('close', async () => {
+        await Wine.bulkCreate(wines)
+          .then(() => {
+            console.log('Wines have been seeded successfully!');
+          })
+          .catch((err) => {
+            console.log('Error seeding wines:', err);
+          });
+
+        // Sort the wines by rating in descending order
+        const sortedWines = wines.sort((a, b) => b.price - a.price);
+        console.log(sortedWines, 'BOOYAH')
+        res.render('offers', {
+          sortedWines, logged_in: req.session.logged_in,
+        });
+      });
+    } else {
+      console.log('++++++')
+      // Fetch all wines from the database
+      const dbWineData = await Wine.findAll({});
+
+      // Map the raw database data to plain JavaScript objects
+      const wines = dbWineData.map((wine) =>
+        wine.get({ plain: true })
+      );
+
+      // Sort the wines by rating in descending order
+      const sortedWines = wines.sort((a, b) => b.price - a.price);
+      console.log(sortedWines, 'KAH')
+      res.render('offers', {
+        sortedWines, logged_in: req.session.logged_in
       });
     }
   } catch (err) {
