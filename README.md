@@ -12,7 +12,7 @@
 
 ## Project Description
 
-Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines and sharing your tasting experiences! Our platform serves as a comprehensive wine search engine, offering an extensive database to help you explore and find the perfect bottle for any occasion.
+Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines and sharing your tasting experiences! Our platform serves as a comprehensive wine exploration engine, offering an extensive database to help you explore and find the perfect bottle for any occasion.
 
 ## Content ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
 
@@ -32,7 +32,7 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
   - Sparkling Wine
 
 - **Top Recommendations:**
-  - Discover a Vino-Vault from each category.
+  - Discover a wine from each category by clicking on your choice of Red, White, Rosé or Sparkling wine .
 
 - **Interactive Experience:**
   - Delete and update wine reviews.
@@ -70,12 +70,19 @@ Follow these steps to set up the Vino-Vault App on your local machine:
 
 ## Usage
 
-1. Open the application in your web browser.
-2. Explore the Vino-Vault recommendations for each category.
-3. Interact with the reviews:
-- Add a new review.
-- Delete or update existing reviews.
-4. Enjoy the diverse flavors and characteristics of each wine category.
+- Clone the repository onto your local workstation
+- Open the integrated terminal and use command npm i to install the node.js modules
+- In your command line, log in to mysql by using the command: mysql -uroot -p and enter your password
+    - In mysql, source the database by using the command: source ./db/schema.sql
+    - Exit mysql by using the command: exit
+- Seed the application by using the command: node seeds/index.js
+- Use command npm start to run the server locally.
+- Open the application in your web browser.
+- Explore the Vino-Vault recommendations for each category, or the top wines.
+- Interact with the reviews:
+    - Add a new review.
+    - Delete or update existing reviews.
+- Enjoy the diverse flavors and characteristics of each wine category.
 
 ## Dependencies
 
