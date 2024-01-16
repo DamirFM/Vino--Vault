@@ -22,6 +22,18 @@ Wine.init(
     varietal: {
       type: DataTypes.TEXT,
     },
+    ex_category: {
+      type: DataTypes.TEXT,
+    },
+    notes: {
+      type: DataTypes.TEXT,
+    },
+    alcohol_percent: {
+      type: DataTypes.INTEGER,
+    },
+    alcohol_volume: {
+      type: DataTypes.TEXT,
+    },
     location: {
       type: DataTypes.TEXT,
     },
