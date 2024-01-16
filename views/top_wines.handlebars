@@ -5,18 +5,18 @@
 {{#each sortedWines as |wine|}}
 <div class="wine">
   <div class="wine-left">
-    <img src="{{this.image}}" alt="{{this.name}}" class="wine-image">
+    <img src="{{this.filename}}" alt="{{this.title}}" class="wine-image">
     <p class="wine-price">${{this.price}}</p>
   </div>
   <div class="wine-details">
-    <h2 class="wine-name">{{this.name}}</h2>
+    <h2 class="wine-name">{{this.title}}</h2>
     <div class="orange-line"></div>
     <p class="wine-rating" data-label="Rating:"> {{this.rating}}/100</p>
     <p class="wine-varietal" data-label="Varietal:">{{this.varietal}}</p>
     <p class="wine-alcohol" data-label="Alcohol Percent:">{{this.alcohol_percent}}%</p>
     <p class="wine-bottle-size" data-label="Bottle Size:">{{this.alcohol_volume}}</p>
     <p class="wine-notes" data-label="Tasting notes:">{{this.notes}}</p>
-    <p class="wine-category" data-label="Category:">{{this.category}}</p>
+    <p class="wine-category" data-label="Category:">{{this.ex_category}}</p>
   </div>
 </div>
 {{/each}}

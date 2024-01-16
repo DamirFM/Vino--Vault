@@ -1,4 +1,4 @@
-const User = require('./user');
+const User = require('./ex_user');
 const Wine = require('./wine');
 const Category = require('./category');
 const Review = require('./review');

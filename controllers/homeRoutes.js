@@ -54,37 +54,37 @@ router.get('/top_wines', async (req, res) => {
     // Check if the database is empty
     const count = await Wine.count();
 
-    if (count < 10) {
-      // Seed the database with the JSONL file data
-      console.log('8888888')
-      let wines = [];
-      const rl = readline.createInterface({
-        input: fs.createReadStream('./assets/wine_documents.jsonl'),
-        output: process.stdout,
-        terminal: false
-      });
+    // if (count < 10) {
+    //   // Seed the database with the JSONL file data
+    //   console.log('8888888')
+    //   let wines = [];
+    //   const rl = readline.createInterface({
+    //     input: fs.createReadStream('./assets/wine_documents.jsonl'),
+    //     output: process.stdout,
+    //     terminal: false
+    //   });
 
-      rl.on('line', (line) => {
-        wines.push(JSON.parse(line));
-      });
+    //   rl.on('line', (line) => {
+    //     wines.push(JSON.parse(line));
+    //   });
 
-      rl.on('close', async () => {
-        await Wine.bulkCreate(wines)
-          .then(() => {
-            console.log('Wines have been seeded successfully!');
-          })
-          .catch((err) => {
-            console.log('Error seeding wines:', err);
-          });
+    //   rl.on('close', async () => {
+    //     await Wine.bulkCreate(wines)
+    //       .then(() => {
+    //         console.log('Wines have been seeded successfully!');
+    //       })
+    //       .catch((err) => {
+    //         console.log('Error seeding wines:', err);
+    //       });
 
-        // Sort the wines by rating in descending order
-        const sortedWines = wines.sort((a, b) => b.rating - a.rating);
-        console.log(sortedWines, '--------------')
-        res.render('top_wines', {
-          sortedWines, logged_in: req.session.logged_in,
-        });
-      });
-    } else {
+    //     // Sort the wines by rating in descending order
+    //     const sortedWines = wines.sort((a, b) => b.rating - a.rating);
+    //     console.log(sortedWines, '--------------')
+    //     res.render('top_wines', {
+    //       sortedWines, logged_in: req.session.logged_in,
+    //     });
+    //   });
+    // } else {
       console.log('++++++')
       // Fetch all wines from the database
       const dbWineData = await Wine.findAll({});
@@ -100,7 +100,7 @@ router.get('/top_wines', async (req, res) => {
       res.render('top_wines', {
         sortedWines, logged_in: req.session.logged_in
       });
-    }
+    // }
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
