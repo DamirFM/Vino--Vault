@@ -9,7 +9,6 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3schools.com/css/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3schools.com/html/)
 
-
 ## Project Description
 
 Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines and sharing your tasting experiences! Our platform serves as a comprehensive wine exploration engine, offering an extensive database to help you explore and find the perfect bottle for any occasion.
