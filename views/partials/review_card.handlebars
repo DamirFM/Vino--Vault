@@ -1,6 +1,9 @@
 <div class="card">
   <div class="card-body">
-<p>{{comment_body}}</p>
-<p>{{format_date date_created}}</p>
+    <p>{{comment_body}}</p>
+    <p>{{format_date date_created}}</p>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-sm btn-danger" id="btn-delete" data-id="{{id}}">DELETE</button>
   </div>
 </div>

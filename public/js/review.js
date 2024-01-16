@@ -2,13 +2,16 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const comment_body = document.querySelector('#text-comment').value.trim();
-  const blogPost_id = event.target.getAttribute('data-id')
+  const wine_id = event.target.getAttribute('data-id')
+  console.log(comment_body)
+  console.log(wine_id)
 
 
-  if (comment_body && blogPost_id) {
-    const response = await fetch(`/api/reviews`, {
+  if (comment_body && wine_id) {
+   
+    const response = await fetch(`/api/review`, {
       method: 'POST',
-      body: JSON.stringify({ comment_body, blogPost_id }),
+      body: JSON.stringify({ comment_body, wine_id }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -28,12 +31,12 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/review/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.reload();
     } else {
       alert('Failed to delete project');
     }
@@ -45,6 +48,6 @@ document
   // click for button
   .addEventListener('click', newFormHandler);
 
-// document
-//   .querySelector('.project-list')
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('#btn-delete')
+  .addEventListener('click', delButtonHandler);
