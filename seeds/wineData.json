@@ -1,6 +1,6 @@
 [
     {
-        "filename":"01-blossoming-apricot.jpg",
+        "filename":"https://www.saq.com/media/catalog/product/1/4/14767510-1_1629741348.png?quality=80&fit=bounds&height=&width=",
         "title": "Chateau de Landiras 2018",
         "varietal": "Bordeaux Red Blends",
         "location": "Graves, Bordeaux, France",
@@ -8,7 +8,7 @@
         "rating": "95"
     },
     {
-        "filename":"01-blossoming-apricot.jpg",
+        "filename":"https://shopliquoryxe.ca/cdn/shop/products/Silver-Oak-Napa-Valley.jpg?v=1587761054",
         "title": "Silver Oak Napa Valley Cabernet Sauvignon 2016",
         "varietal": "Cabernet Sauvignon",
         "location": "Napa Valley, California",
@@ -16,7 +16,7 @@
         "rating": "92"
     },
     {
-        "filename":"01-blossoming-apricot.jpg",
+        "filename":"https://minuman.com/cdn/shop/files/SILVEROAK-ALEXANDERVALLEY-2017-750ML.jpg?v=1695792354",
         "title": "Silver Oak Alexander Valley Cabernet Sauvignon 2017",
         "varietal": "Cabernet Sauvignon",
         "location": "Alexander Valley, Sonoma County, California",
@@ -24,27 +24,19 @@
         "rating": "91"
     },
     {
-        "filename":"01-blossoming-apricot.jpg",
-        "title": "Beaulieu Vineyard Georges de Latour Private Reserve 2018",
-        "varietal": "Cabernet Sauvignon",
-        "location": "Napa Valley, California",
-        "price": "70",
+        "filename":"https://www.astorwines.com/images/items/42085.jpg",
+        "title": "Picayune Cellars Sauvignon Blanc 2020",
+        "varietal": "Sauvignon Blanc",
+        "location": "North Coast, California",
+        "price": "26",
         "rating": "97"
     },
     {
         "filename":"01-blossoming-apricot.jpg",
-        "title": "Joseph Phelps Freestone Vineyards Pinot Noir 2019",
-        "varietal": "Pinot Noir",
-        "location": "Montalcino, Tuscany, Italy",
-        "price": "75",
-        "rating": "94"
-    },
-    {
-        "filename":"01-blossoming-apricot.jpg",
-        "title": "Duckhorn Napa Valley Cabernet Sauvignon 2019",
-        "varietal": "Sangiovese",
-        "location": "Paso Robles, Central Coast, California",
-        "price": "30",
-        "rating": "97"
+        "title": "Domaine Clos des Rocs Pouilly-Loche Les Mures 2019",
+        "varietal": "Chardonnay",
+        "location": "Pouilly-Loche, Maconnais",
+        "price": "36",
+        "rating": "91"
     }
 ]
