@@ -23,6 +23,10 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 - [Contributing](#Contributing)
 - [Questions](#Questions)
 
+## Link of deployed application
+
+- https://ancient-lake-44240-9868d3fa9e71.herokuapp.com
+
 ## Features
 
 - **Wine Categories:**
@@ -42,23 +46,23 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 
 ### Welcome screen
 
-![Alt text](./Screensots/1 "Welcome screen")
+![Alt text](./screensots/1 "Welcome screen")
 
 ### Top Wines
 
-![Alt text](./Screensots/2.png "Top Wines")
+![Alt text](./screensots/2.png "Top Wines")
 
 ### About us
 
-![Alt text](./Screensots/3.png "About us")
+![Alt text](./screensots/3.png "About us")
 
 ### Login Page
 
-![Alt text](./Screensots/4.png "Login Page")
+![Alt text](./screensots/4.png "Login Page")
 
 ### Profile
 
-![Alt text](./Screensots/5.png "Profile")
+![Alt text](./screensots/5.png "Profile")
 
 ## Installation
 
