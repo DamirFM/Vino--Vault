@@ -4,7 +4,7 @@
     --light: #e3e4e3;
     --dark: #182c23;
   }
-/* Header styles for handlebar */
+
 header.display-flex {
     display: flex;
     align-items: center;
@@ -13,25 +13,25 @@ header.display-flex {
     color: var(--light);
   }
   
-  /* Logo styles */
+  
   img {
-    /* width: ; */
+    
     height: 80px;
   }
   
   
-  /* Navigation links for handlebar */
+  
   nav {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the content horizontally */
-    flex-grow: 1; /* Allow the navigation to grow and take available space */
+    justify-content: center;
+    flex-grow: 1; 
   }
   
   nav a {
     color: var(--light);
     text-decoration: none;
-    margin: 0 20px; /* Adjust margin for spacing between links */
+    margin: 0 20px; 
     font-weight: bold;
     font-size: 1.4rem;
     transition: color 0.3s;
@@ -41,7 +41,7 @@ header.display-flex {
     color: var(--orange);
   }
   
-  /* Search bar styles for handlebar */
+ 
   #user-input {
     background-color: white;
     color: var(--dark);
@@ -53,7 +53,7 @@ header.display-flex {
     font-size: 1rem;
   }
   
-  /* Button styles for handlebar */
+ 
   .button {
     background: var(--primary);
     border: 3px solid var(--orange);

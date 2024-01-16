@@ -1,10 +1,10 @@
-/* Wine styles */
+
 .wine {
     margin: 20px;
     padding: 15px;
     border: 3px solid var(--dark);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust the last value (0.8) for opacity */
+    background-color: rgba(255, 255, 255, 0.8); 
     color: var(--dark);
     position: relative;
     display: flex;
@@ -14,10 +14,10 @@
 
 
 .wine-left {
-    width: 33%; /* Set the width to approximately 33% */
+    width: 33%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
+    align-items: flex-start;
 }
 
 .wine-name {
@@ -38,24 +38,23 @@
 }
 
 .wine-image {
-    height: auto; /* Auto height to maintain aspect ratio */
-    width: 100%; /* Occupy 100% width */
-    max-height: 300px; /* Set a max height for uniformity */
+    height: auto; 
+    width: 100%; 
+    max-height: 300px; 
     margin-bottom: 10px;
-    object-fit: contain; /* Maintain aspect ratio while fitting */
-}
+    object-fit: contain; }
 
 .wine-details {
-    width: 67%; /* Set the width to approximately 67% */
+    width: 67%; 
     margin-left: 20px;
 }
 .wine-price.regular {
-    color: #FF0000; /* Red color for regular price */
-    text-decoration: line-through; /* Add a strikethrough effect */
+    color: #FF0000; 
+    text-decoration: line-through; 
 }
 
 .wine-price.discount {
-    color: #008000; /* Green color for discounted price */
+    color: #008000;
     font-weight: bold;
 }
 

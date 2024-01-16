@@ -1,10 +1,10 @@
-/* About Us styles */
+
 .about-container {
     margin: 20px;
     padding: 30px;
     border: 3px solid var(--dark);
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust the last value (0.8) for opacity */
+    background-color: rgba(255, 255, 255, 0.8); 
     color: var(--dark);
     position: relative;
 }
@@ -50,12 +50,12 @@
     margin-bottom: 15px;
 }
 
-/* Style for the discount text */
+
 .discount-text {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #FF0000; /* Red color for emphasis */
-    margin-top: 20px; /* Increased margin for separation */
+    color: #FF0000; 
+    margin-top: 20px; 
 }
 
 .about-signature {

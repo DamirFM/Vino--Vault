@@ -1,4 +1,4 @@
-/* Form container styles */
+
 .form-container {
     margin: 20px;
     padding: 15px;
@@ -9,27 +9,27 @@
     position: relative;
 }
 
-/* Form title styles */
+
 .form-container h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: var(--dark); /* Set title color to orange */
+    color: var(--dark); 
     position: relative;
 }
 
-/* Underline styles for form titles */
+
 .form-container h2::after {
     content: '';
     display: block;
     height: 3px;
     width: 100%;
-    background-color: var(--dark); /* Underline color */
+    background-color: var(--dark); 
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-/* Form styles */
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -43,7 +43,7 @@
     border: 1px solid var(--dark);
     border-radius: 5px;
 }
-/* Login and Signup button styles */
+
 .btn-primary {
     background-color: var(--dark-red);
     border: 3px solid var(--dark);
