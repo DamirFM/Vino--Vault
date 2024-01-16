@@ -21,7 +21,7 @@ const newFormHandler = async (event) => {
       // stay on the same page
       document.location.reload();
     } else {
-      alert('Failed to create project');
+      alert('Failed to create review');
     }
   }
 };
@@ -36,12 +36,14 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.reload();
+      document.location.replace('/profile');
     } else {
       alert('Failed to delete project');
     }
   }
 };
+
+
 
 document
   .querySelector('#btn-comment')
@@ -49,5 +51,6 @@ document
   .addEventListener('click', newFormHandler);
 
 document
-  .querySelector('#btn-delete')
+  .querySelector('.project-list')
   .addEventListener('click', delButtonHandler);
+
