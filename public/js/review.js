@@ -26,30 +26,30 @@ const newFormHandler = async (event) => {
   }
 };
 
-const updateButtonHandler = async (event) => {
-  if (event.target.classList.contains('btn-update')) {
-    const id = event.target.getAttribute('data-id');
-    const updatedCommentBody = prompt('Enter the updated comment:');
+// const updateButtonHandler = async (event) => {
+//   if (event.target.classList.contains('btn-update')) {
+//     const id = event.target.getAttribute('data-id');
+//     const updatedCommentBody = prompt('Enter the updated comment:');
 
-    if (updatedCommentBody !== null) {
+//     if (updatedCommentBody !== null) {
     
-      const response = await fetch(`/api/review/${id}`, {
+//       const response = await fetch(`/api/review/${id}`, {
         
-        method: 'PUT',
-        body: JSON.stringify({ comment_body: updatedCommentBody }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+//         method: 'PUT',
+//         body: JSON.stringify({ comment_body: updatedCommentBody }),
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//       });
 
-      if (response.ok) {
-        document.location.reload();
-      } else {
-        alert('Failed to update review');
-      }
-    }
-  }
-};
+//       if (response.ok) {
+//         document.location.reload();
+//       } else {
+//         alert('Failed to update review');
+//       }
+//     }
+//   }
+// };
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -75,10 +75,10 @@ document
   .addEventListener('click', newFormHandler);
 
 document
-  .querySelector('.btn-delete')
+  .querySelector('.project-list')
   .addEventListener('click', delButtonHandler);
 
-document
-  .querySelector('.btn-update')
-  .addEventListener('click', updateButtonHandler);
+// document
+//   .querySelector('.btn-update')
+//   .addEventListener('click', updateButtonHandler);
 
