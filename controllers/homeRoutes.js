@@ -78,7 +78,7 @@ router.get('/top_wines', async (req, res) => {
       const sortedWines = wines.sort((a, b) => b.rating - a.rating);
       console.log(sortedWines, '=============')
       res.render('top_wines', {
-        sortedWines,
+        sortedWines, logged_in: req.session.logged_in
       });
     }
   } catch (err) {
@@ -104,7 +104,7 @@ router.get('/category/:id', async (req, res) => {
 
     const category = dbCategoryData.get({ plain: true });
     console.log(category)
-    res.render('category', { ...category });
+    res.render('category', { ...category, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
