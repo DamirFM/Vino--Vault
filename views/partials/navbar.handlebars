@@ -1,25 +1,27 @@
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="vine">🍷</span>
-        <a href="/">Vino-Vault</a>
-      </h1>
-      <nav>
-        <input id="user-input" class="form-control" type="text" placeholder="Search for your Wine!">
-        <!-- Conditionally render login or logout links -->
-        <a href="/">Home</a>
-        {{!-- Do not foget to change link --}}
-        <a href="/top_wines">Top Wines</a>
-        <a href="/about_us">About Us</a>
-        <a href="/profile">profile</a>      
-        <a href="/offers">Offers</a>
+<header class="display-flex justify-space-between align-center p-2">
+  <h1>
+    <span role="img" aria-label="vine">🍷</span>
+    <a href="/">Vino-Vault</a>
+  </h1>
+  <nav>
+    <input id="user-input" class="form-control" type="text" placeholder="Search for your Wine!">
+    <!-- Conditionally render login or logout links -->
+    <a href="/">Home</a>
+    {{!-- Do not foget to change link --}}
+    <a href="/top_wines">Top Wines</a>
+    <a href="/about_us">About Us</a>
+    <a href="/offers">Offers</a>
+    {{#if logged_in}}
+    <a href="/profile" id="id_profile">Profile</a>
+    {{/if}}
+  </nav>
 
-      </nav>
-      {{#if logged_in}}
-      <a href="/"></a> 
-      <button class="button" id="logout">logout</button>
-      {{else}}
-      <a href="/login" id="login">login</a>
-      {{/if}}
-      
-    <script src="/js/logout.js"></script>
-    </header>
+  {{#if logged_in}}
+  <a href="/"></a>
+  <button class="button" id="logout">logout</button>
+  {{else}}
+  <a href="/login" id="login">login</a>
+  {{/if}}
+
+  <script src="/js/logout.js"></script>
+</header>

@@ -17,6 +17,28 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  // update a category by its `id` value
+  try {
+    const reviewData = await Review.update(
+      {
+        comment_body: req.body.category_name,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      });
+    if (!reviewData[0]) {
+      res.status(404).json({ message: 'No Review with this id!' });
+      return;
+    }
+    res.status(200).json(reviewData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
