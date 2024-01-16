@@ -1,14 +1,18 @@
 [
     {
-        "category_name" : "Red Wine"
+        "category_name" : "Red Wine",
+        "category_img" : "/images/redwine.png"
     },
     {
-        "category_name" : "White Wine"
+        "category_name" : "White Wine",
+        "category_img" : "/images/whitewine.png"
     },
     {
-        "category_name" : "Rose"
+        "category_name" : "Rose",
+        "category_img" : "/images/rosewine.png"
     },
     {
-        "category_name" : "Sparkling"
+        "category_name" : "Sparkling",
+        "category_img" : "/images/sparklingwine.png"
     }
 ]

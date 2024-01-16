@@ -1,28 +1,37 @@
 {{#if logged_in}}
+<link rel="stylesheet" href="/css/jass.css" />
+<link rel="stylesheet" href="/css/offers.css" />
 <div>
     <div>
-        <div>
+        <div class="container">
             {{#each sortedWines as |wine|}}
             <div class="wine">
-                <h2>{{this.name}}</h2>
-                <p class="regular">${{this.price}}</p>
-                <p class="discount">${{divide this.price 2}}</p>
-                <img src="{{this.image}}" alt="{{this.name}}">
-                <p>Rating:{{this.rating}}/100</p>
-                <p>Varietal: {{this.varietal}}</p>
-                <p>Alcohol Percent{{this.alcohol_percent}}</p>
-                <p>Bottle Size: {{this.alcohol_volume}}</p>
-                <p>Tasting notes: {{this.notes}}</p>
-                <p>Category: {{this.category}}</p>
+                <div class="wine-left">
+                    <img src="{{this.image}}" alt="{{this.name}}" class="wine-image">
+                    <p class="wine-price regular">${{this.price}}</p>
+                    <p class="wine-price discount">${{divide this.price 2}}</p>
+                </div>
+                <div class="wine-details">
+                    <h2 class="wine-name">{{this.name}}</h2>
+                    <p class="wine-rating" data-label="Rating:"> {{this.rating}}/100</p>
+    <p class="wine-varietal" data-label="Varietal:">{{this.varietal}}</p>
+    <p class="wine-alcohol" data-label="Alcohol Percent:">{{this.alcohol_percent}}%</p>
+    <p class="wine-bottle-size" data-label="Bottle Size:">{{this.alcohol_volume}}</p>
+    <p class="wine-notes" data-label="Tasting notes:">{{this.notes}}</p>
+    <p class="wine-category" data-label="Category:">{{this.category}}</p>
+                </div>
             </div>
             {{/each}}
         </div>
     </div>
 </div>
+
 {{else}}
+<link rel="stylesheet" href="/css/jass.css" />
+<link rel="stylesheet" href="/css/loginnotif.css" />
 <div id="loginModal" style="display: none;">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="location.href='/top_wines';">&times;</span>
         <p>Please log in to see these WINEderful offers.</p>
         <button onclick="location.href='/login';">Log In</button>
     </div>
@@ -30,5 +39,9 @@
 <script>
     var modal = document.getElementById("loginModal");
     modal.style.display = "block";
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
 </script>
 {{/if}}

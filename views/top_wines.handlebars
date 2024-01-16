@@ -1,15 +1,23 @@
+<!-- Loop over each object in the sortedWines array -->
+<link rel="stylesheet" href="/css/jass.css" />
+<link rel="stylesheet" href="/css/top_wines.css" />
 
 {{#each sortedWines as |wine|}}
 <div class="wine">
- <h2>{{this.name}}</h2>
- <p>${{this.price}}</p>
-<img src="{{this.image}}" alt="{{this.name}}">
-<p>Rating:{{this.rating}}/100</p>
- <p>Varietal: {{this.varietal}}</p>
- <p>Alcohol Percent{{this.alcohol_percent}}</p>
- <p>Bottle Size: {{this.alcohol_volume}}</p>
- <p>Tasting notes: {{this.notes}}</p>
- <p>Category: {{this.category}}</p>
+  <div class="wine-left">
+    <img src="{{this.image}}" alt="{{this.name}}" class="wine-image">
+    <p class="wine-price">${{this.price}}</p>
+  </div>
+  <div class="wine-details">
+    <h2 class="wine-name">{{this.name}}</h2>
+    <div class="orange-line"></div>
+    <p class="wine-rating" data-label="Rating:"> {{this.rating}}/100</p>
+    <p class="wine-varietal" data-label="Varietal:">{{this.varietal}}</p>
+    <p class="wine-alcohol" data-label="Alcohol Percent:">{{this.alcohol_percent}}%</p>
+    <p class="wine-bottle-size" data-label="Bottle Size:">{{this.alcohol_volume}}</p>
+    <p class="wine-notes" data-label="Tasting notes:">{{this.notes}}</p>
+    <p class="wine-category" data-label="Category:">{{this.category}}</p>
+  </div>
 </div>
 {{/each}}
 

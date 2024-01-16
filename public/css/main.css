@@ -1,0 +1,41 @@
+/* Set the background image for the body */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/background.jpg'); /* Adjust the path to your actual image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Set the background image as fixed */
+}
+
+/* Main container styles */
+#main-container {
+    padding: 40px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+#title-text {
+    color: var(--light);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent black background */
+    padding: 10px; /* Add padding for better visibility */
+}
+
+/* Gallery styles */
+div.gallery {
+    background-color: transparent; /* Set background color to transparent */
+}
+
+/* Container styles */
+.container {
+    margin: 0 auto;
+}
+
+/* Adjust the card styles as needed */
+.row.homepage-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

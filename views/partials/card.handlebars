@@ -1,9 +1,10 @@
-      <div class="row mb-4 project card text-dark shadow">
-        <div class="card-header">
-          <h3>
-            <a href="/category/{{id}}">{{category_name}}
-          </h3>
-          <img src="/images/{{wine.[0].filename}}" alt="{{wine.[0].title}}">  
-          </a>
-        </div>
-      </div>
+<!-- card.handlebars -->
+<div class="cards" >
+  <link rel="stylesheet" href="/css/jass.css" />
+  <link rel="stylesheet" href="/css/card.css" />
+  <div class="card-header">
+    <a class="catborder" href="/category/{{id}}">
+      See Our {{category_name}}!
+    </a>
+  </div>
+</div>

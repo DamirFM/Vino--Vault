@@ -1,0 +1,56 @@
+/* Card styles */
+.cards {
+    margin: 20px;
+    flex: 0 1 300px;
+    border: 3px solid #ff8c1a; /* Muted orange color */
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--dark);
+    height: 200px;
+    position: relative;
+    background-image: url('/images/redwine.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+}
+
+/* Card header styles */
+.cards .card-header {
+    color: var(--light);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.625rem;
+    border-radius: 10px 10px 0 0; /* Update border-radius for a more consistent look */
+}
+
+/* Card body styles */
+.cards .card-body {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Card footer styles */
+.cards .card-footer {
+    padding: 0.625rem;
+    border-radius: 0 0 10px 10px; /* Update border-radius for a more consistent look */
+    background-color: var(--primary);
+}
+
+/* Orange border around clickable link text */
+.cards .catborder {
+    border: 2px solid #ff8c1a; /* Muted orange color */
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--primary);
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.cards .catborder:hover {
+    background: #ff8c1a; /* Muted orange color on hover */
+    color: var(--primary);
+    border-color: var(--primary);
+}

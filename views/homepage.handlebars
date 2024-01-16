@@ -1,11 +1,14 @@
-<!-- Loop over each object in the projects array -->
-<div>Featured Wines</div>
+<link rel="stylesheet" href="/css/jass.css" />
+<link rel="stylesheet" href="/css/homepage.css" />
 
-<div class="container">
-  <div class="row homepage-main">
-    {{#each categories as |category|}}
-    {{> card}}
-    {{/each}}
+<div id="homepage-container">
+  <div id="titletext">Featured Wines</div>
+
+  <div class="container">
+    <div class="row homepage-main">
+      {{#each categories as |category|}}
+        {{> card}}
+      {{/each}}
+    </div>
   </div>
 </div>
-   
