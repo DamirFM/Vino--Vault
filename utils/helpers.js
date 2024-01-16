@@ -7,4 +7,8 @@ module.exports = {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
+  divide: (value, divisor) => {
+    // Custom helper to perform division
+    return value / divisor;
+  },
 };

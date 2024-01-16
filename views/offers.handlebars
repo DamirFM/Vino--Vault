@@ -20,8 +20,8 @@
 {{#each sortedWines as |wine|}}
 <div class="wine">
  <h2>{{this.name}}</h2>
- <p>${{this.price}}</p>
-<img src="{{this.image}}" alt="{{this.name}}">
+ <p class="regular">${{this.price}}</p> <p class="discount">${{divide this.price 2}}</p>
+ <img src="{{this.image}}" alt="{{this.name}}">
 <p>Rating:{{this.rating}}/100</p>
  <p>Varietal: {{this.varietal}}</p>
  <p>Alcohol Percent{{this.alcohol_percent}}</p>
