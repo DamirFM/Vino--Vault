@@ -1,18 +1,26 @@
-<div class="container">
-  <div class="row homepage-main">
-<h2>{{title}}</h2>
-<img src="{{filename}}" alt="{{title}}">
-<h3>Wine varietal:{{varietal}}</h3>
-<h3>Wine location: {{location}}</h3>
-<h3>price: ${{price}}</h3>
-<h3>rating: {{rating}}</h3>
-<h3>category: {{category.category_name}}</h3>
+<link rel="stylesheet" href="/css/jass.css">
+<link rel="stylesheet" href="/css/categories.css">
 
-{{>review_form}}
-{{#each reviews as |review|}}
-{{>review_card}}
-{{/each}}
-  </div>
+<div class="container">
+    <div class="row homepage-main homepage-main-container">
+        <h2>{{title}}</h2>
+        <div class="left-section">
+          
+            <img src="{{filename}}" alt="{{title}}">
+        </div>
+        <div class="right-section">
+            <h3>Wine varietal:{{varietal}}</h3>
+            <h3>Wine location: {{location}}</h3>
+            <h3>Price: ${{price}}</h3>
+            <h3>Rating: {{rating}}</h3>
+            <h3>Category: {{category.category_name}}</h3>
+</div>
+            {{>review_form}}
+            {{#each reviews as |review|}}
+                {{>review_card}}
+            {{/each}}
+        
+    </div>
 </div>
 
 <script src="/js/review.js"></script>

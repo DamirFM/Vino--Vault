@@ -1,0 +1,39 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+#main-container {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#title-text {
+    color: var(--light);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px; /
+}
+
+div.gallery {
+    background-color: transparent;
+
+}
+.container {
+    margin: 0 auto;
+}
+
+
+.row.homepage-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

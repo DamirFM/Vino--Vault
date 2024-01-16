@@ -1,15 +1,21 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+<link rel="stylesheet" href="/css/jass.css">
+<link rel="stylesheet" href="/css/profile.css">
+
+<div class="profile-container">
+  <div class="row">
+    <div class="col-auto">
+      <h2>Welcome, {{name}}!</h2>
+    </div>
+  </div>
+  <div class="col-md-6 project-list">
+    <h3>Current reviews:</h3>
+    {{>review_form}}
+    {{#each reviews as |review|}}
+      {{>review_card}}
+      <button class="btn btn-sm btn-danger btn-delete" data-id="{{id}}">DELETE</button>
+      <button class="btn btn-sm btn-danger btn-update" data-id="{{id}}">UPDATE</button>
+    {{/each}}
   </div>
 </div>
-<div class="col-md-6 project-list">
-  <h3>Current reviews:</h3>
-  {{>review_form}}
-  {{#each reviews as |review|}}
-  {{>review_card}}
-  <button class="btn btn-sm btn-danger btn-delete" data-id="{{id}}">DELETE</button>
-  <button class="btn btn-sm btn-danger btn-update" data-id="{{id}}">UPDATE</button>
-  {{/each}}
-</div>
+
 <script src="/js/review.js"></script>
