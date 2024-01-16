@@ -9,7 +9,6 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3schools.com/css/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3schools.com/html/)
 
-
 ## Project Description
 
 Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines and sharing your tasting experiences! Our platform serves as a comprehensive wine exploration engine, offering an extensive database to help you explore and find the perfect bottle for any occasion.
@@ -22,6 +21,10 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 - [Dependencies](#Dependencies)
 - [Contributing](#Contributing)
 - [Questions](#Questions)
+
+## Link of deployed application
+
+- https://ancient-lake-44240-9868d3fa9e71.herokuapp.com
 
 ## Features
 
@@ -42,23 +45,23 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 
 ### Welcome screen
 
-![Alt text](./Screensots/1 "Welcome screen")
+![Alt text](./screensots/1 "Welcome screen")
 
 ### Top Wines
 
-![Alt text](./Screensots/2.png "Top Wines")
+![Alt text](./screensots/2.png "Top Wines")
 
 ### About us
 
-![Alt text](./Screensots/3.png "About us")
+![Alt text](./screensots/3.png "About us")
 
 ### Login Page
 
-![Alt text](./Screensots/4.png "Login Page")
+![Alt text](./screensots/4.png "Login Page")
 
 ### Profile
 
-![Alt text](./Screensots/5.png "Profile")
+![Alt text](./screensots/5.png "Profile")
 
 ## Installation
 
