@@ -43,26 +43,25 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 
 ## Screenshots of application
 
-
 ### Welcome screen
 
-![Alt text](./screensots/1 "Welcome screen")
+![Alt text](./screenshots/1 "Welcome screen")
 
 ### Top Wines
 
-![Alt text](./screensots/2.png "Top Wines")
+![Alt text](./screenshots/2.png "Top Wines")
 
 ### About us
 
-![Alt text](./screensots/3.png "About us")
+![Alt text](./screenshots/3.png "About us")
 
 ### Login Page
 
-![Alt text](./screensots/4.png "Login Page")
+![Alt text](./screenshots/4.png "Login Page")
 
 ### Profile
 
-![Alt text](./screensots/5.png "Profile")
+![Alt text](./screenshots/5.png "Profile")
 
 ## Installation
 
