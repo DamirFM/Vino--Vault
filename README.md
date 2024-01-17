@@ -106,7 +106,7 @@ Contributions are welcome!
 
 ## Questions
 If you have any questions or issues, please feel free to reach out:
-- GitHub: https://github.com/https://github.com/DamirFM
-- GitHub: https://github.com/https://github.com/wrn007
-- GitHub: https://github.com/https://github.com/pnguyen412
+- GitHub: https://github.com/DamirFM
+- GitHub: https://github.com/wrn007
+- GitHub: https://github.com/pnguyen412
 
