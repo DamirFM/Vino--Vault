@@ -15,7 +15,9 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 
 ## Content ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
 
+- [Deploy](#deploy)
 - [Features](#Features)
+- [Screenshots](#Screenshots)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Dependencies](#Dependencies)
@@ -45,7 +47,7 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 
 ### Welcome screen
 
-![Alt text](./screenshots/1 "Welcome screen")
+![Alt text](./screenshots/1.png "Welcome screen")
 
 ### Top Wines
 
