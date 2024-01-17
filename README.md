@@ -43,6 +43,7 @@ Welcome to Vino-Vault, your ultimate destination for discovering exquisite wines
 
 ## Screenshots of application
 
+
 ### Welcome screen
 
 ![Alt text](./screensots/1 "Welcome screen")
